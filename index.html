@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check-list</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section class="container">
+      <div class="w-50 mx-auto d-flex border p-4">
+        <input
+          class="form-control py-2"
+          type="text"
+          name="club"
+          placeholder="Enter club name.."
+          id="club-input"
+        />
+        <button class="btn btn-danger" onclick="sportsLoad()">Search</button>
+      </div>
+      <!-- spinner -->
+      <div class="text-center my-5 d-none" id="spinner">
+        <div class="spinner-border text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <!-- errors -->
+      <div class="text-center my-5 d-none" id="error">
+        <h1 class="text-danger">
+          404! try with others.<br />your defined club name dosen't match.
+        </h1>
+      </div>
+      <div class="row py-3" id="sports-field"></div>
+    </section>
+    <!-- script.js -->
+    <script src="./script.js"></script>
+  </body>
+</html>
